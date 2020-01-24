@@ -1,4 +1,4 @@
-{% set version = '1.4' %}
+{% set version = "1.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rngtools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rngtools/rngtools_{{ version }}.tar.gz
-  sha256: 3aa92366e5d0500537964302f5754a750aff6b169a27611725e7d84552913bce
+  sha256: 8274873b73f7acbe0ce007e62893bf4d369d2aab8768754a60da46b3f078f575
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
