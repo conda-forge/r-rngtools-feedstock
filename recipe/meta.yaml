@@ -1,4 +1,4 @@
-{% set version = "1.5" %}
+{% set version = "1.5.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rngtools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rngtools/rngtools_{{ version }}.tar.gz
-  sha256: 8274873b73f7acbe0ce007e62893bf4d369d2aab8768754a60da46b3f078f575
+  sha256: 7f8c76ca4c7851b69a86e27be09b02ddc86357f0388659ef8787634682e8a74d
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -42,12 +42,10 @@ test:
 about:
   home: https://renozao.github.io/rngtools
   license: GPL-3
-  summary: Provides a set of functions for working with Random Number Generators (RNGs). In particular,
-    a generic S4 framework is defined for getting/setting the current RNG, or RNG data
-    that are embedded into objects for reproducibility. Notably, convenient default
-    methods greatly facilitate the way current RNG settings can be changed.
+  summary: Provides a set of functions for working with Random Number Generators (RNGs). In particular, a generic S4 framework is defined for getting/setting the current RNG, or RNG data that are embedded into objects for reproducibility. Notably, convenient default methods greatly facilitate the way current RNG settings
+    can be changed.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
