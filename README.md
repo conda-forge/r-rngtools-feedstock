@@ -1,11 +1,11 @@
-About r-rngtools
-================
+About r-rngtools-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rngtools-feedstock/blob/main/LICENSE.txt)
 
 Home: https://renozao.github.io/rngtools
 
 Package license: GPL-3
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rngtools-feedstock/blob/main/LICENSE.txt)
 
 Summary: Provides a set of functions for working with Random Number Generators (RNGs). In particular, a generic S4 framework is defined for getting/setting the current RNG, or RNG data that are embedded into objects for reproducibility. Notably, convenient default methods greatly facilitate the way current RNG settings can be changed.
 
